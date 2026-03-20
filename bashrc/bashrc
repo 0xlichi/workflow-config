@@ -28,6 +28,8 @@ alias lgit='lazygit'
 alias rm='rm -i'
 alias ip='ip -br addr'
 alias lg='lazygit'
+alias time='date | cut -d " " -f 4,5 | cut -d : -f 1,2'
+alias cpu='sensors | grep Tctl'
 
 # --- caido ---
 alias caido='cd ~/caido-desktop-x64-linux && ./caido'
@@ -42,6 +44,14 @@ alias empty-trash='trash-empty'
 alias pbat='bat -p'
 alias bat='bat -pn'
 alias cat='pbat'
+alias me='whoami'
+
+# --- git ---
+alias git-log='git --no-pager log --oneline --graph --all'
+alias git-push='git push --force-with-lease'
+
+# --- burp pro ---
+alias burp-pro="burpsuitepro"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
@@ -58,4 +68,4 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-rfkill unblock all
+# rfkill unblock all
