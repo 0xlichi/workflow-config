@@ -75,7 +75,7 @@ format = "[ $symbol ($version) ]($style)"
 
 [golang]
 symbol = " "
-style = "bg:#E80721 fg:#4245EB"
+style = "bg:#E80721 fg:#65A0F5"
 format = "[ $symbol ]($style)"
 # format = "[ $symbol ($version) ]($style)"
 
@@ -120,7 +120,7 @@ format = "[ $symbol ($version) ]($style)"
 
 [lua]
 symbol = " "
-style = "bg:#E80721 fg:#020617"
+style = "bg:#E80721 fg:#65A0F5"
 format = "[ $symbol ($version) ]($style)"
 
 [docker_context]
@@ -132,5 +132,6 @@ format = "[ $symbol $context ]($style)"
 success_symbol = "[](bold fg:#22c55e)"
 error_symbol = "[](bold fg:#ef4444)"
 vicmd_symbol = "[](bold fg:##E8C007)"
+
 
 
