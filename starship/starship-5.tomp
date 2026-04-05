@@ -23,6 +23,7 @@ $nim\
 $rust\
 $scala\
 $lua\
+$python\
 [](fg:#E80721 bg:#2dd4bf)\
 $docker_context\
 [ ](fg:#2dd4bf)\
@@ -86,6 +87,11 @@ format = "[ $symbol ($version) ]($style)"
 [haskell]
 symbol = " "
 style = "bg:#E80721 fg:#020617"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = " "
+style = "bg:#E80721 fg:#00FFFF"
 format = "[ $symbol ($version) ]($style)"
 
 [java]
