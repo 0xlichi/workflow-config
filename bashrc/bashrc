@@ -13,23 +13,23 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export STARSHIP_CACHE=~/.starship/cache
 
 # Alias Lenovo Vantage CLI
-alias svantage='vantage-cli status'
-alias vantage='sudo vantage-cli conservation'
+alias svantage='vantage-cli status | lolcat'
+alias vantage='sudo vantage-cli conservation | lolcat'
 
 # My Custom Alias
 alias clr='clear'
-alias ff='fastfetch'
-alias battery='fastfetch | grep "Battery (L20M2PF0)"'
-alias ram='fastfetch | grep "Memory"'
-alias online='fastfetch | grep "Uptime"'
+alias ff='fastfetch | lolcat'
+alias battery='fastfetch | grep "Battery (L20M2PF0)" | lolcat'
+alias ram='fastfetch | grep "Memory" | lolcat'
+alias online='fastfetch | grep "Uptime" | lolcat'
 alias hmdr='cd ~'
 alias cd='z'
 alias lgit='lazygit'
 alias rm='rm -i'
-alias ip='ip -br addr'
+alias ip='ip -br addr | lolcat'
 alias lg='lazygit'
-alias time='date | cut -d " " -f 4,5 | cut -d : -f 1,2'
-alias cpu='sensors | grep Tctl'
+alias Time='date | cut -d " " -f 5 | cut -d : -f 1,2 | lolcat'
+alias cpu='sensors | grep Tctl | lolcat'
 
 # --- caido ---
 alias caido='cd ~/caido-desktop-x64-linux && ./caido'
@@ -47,25 +47,10 @@ alias cat='pbat'
 alias me='whoami'
 
 # --- git ---
-alias git-log='git --no-pager log --oneline --graph --all'
+alias git-log='git log --oneline --graph --all'
 alias git-push='git push --force-with-lease'
 
 # --- burp pro ---
 alias burp-pro="burpsuitepro"
 
 # Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-
-# Setup zoxide
-eval "$(zoxide init bash)"
-
-# Setup Yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd <"$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
-
-# rfkill unblock all
