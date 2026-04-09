@@ -28,7 +28,7 @@ alias lgit='lazygit'
 alias rm='rm -i'
 alias ip='ip -br addr | lolcat'
 alias lg='lazygit'
-alias Time='date | cut -d " " -f 5 | cut -d : -f 1,2 | lolcat'
+alias Time='date | cut -d " " -f 4 | cut -d : -f 1,2 | lolcat'
 alias cpu='sensors | grep Tctl | lolcat'
 
 # --- caido ---
