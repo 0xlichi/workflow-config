@@ -19,7 +19,7 @@ alias vantage='sudo vantage-cli conservation | lolcat'
 # My Custom Alias
 alias clr='clear'
 alias ff='fastfetch | lolcat'
-alias battery='fastfetch | grep "Battery (L20M2PF0)" | lolcat'
+alias battery='fastfetch | grep "Battery" | lolcat'
 alias ram='fastfetch | grep "Memory" | lolcat'
 alias online='fastfetch | grep "Uptime" | lolcat'
 alias hmdr='cd ~'
@@ -54,3 +54,16 @@ alias git-push='git push --force-with-lease'
 alias burp-pro="burpsuitepro"
 
 # Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Setup zoxide
+eval "$(zoxide init bash)"
+
+# Setup Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd <"$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
