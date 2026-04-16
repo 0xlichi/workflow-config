@@ -1,0 +1,154 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#9F1239)\
+$username\
+[](bg:#F43F5E fg:#9F1239)\
+$directory\
+[](fg:#F43F5E bg:#7F1D1D)\
+$git_branch\
+$git_status\
+[](fg:#7F1D1D bg:#FB923C)\
+$c\
+$elixir\
+$elm\
+$golang\
+$lua\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+$scala\
+[](fg:#FB923C bg:#78350F)\
+$docker_context\
+[](fg:#78350F bg:#4D7C0F)\
+$time\
+[ ](fg:#4D7C0F)\
+\n$character
+"""
+
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bg:#9F1239 fg:#F9FAFB"
+style_root = "bg:#9F1239 fg:#F9FAFB"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#F43F5E fg:#1F2937"
+format = "[ $path ]($style)"
+truncate_to_repo = false
+truncation_length = 1000
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#7F1D1D fg:#F9FAFB"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#7F1D1D fg:#F9FAFB"
+format = '[$all_status$ahead_behind ]($style)'
+
+# ---- LANGUAGE COLORS (kept distinct) ----
+
+[c]
+symbol = " "
+style = "bg:#A8B9CC fg:#1F2937"
+format = '[ $symbol ($version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:#00599C fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#FB923C fg:#1F2937"
+format = '[ $symbol ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#DEA584 fg:#1F2937"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#3776AB fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#3C873A fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#EA2D2E fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#DC322F fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#5D4F85 fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#6E4A7E fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#1293D8 fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#9558B2 fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#FFE953 fg:#1F2937"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = " "
+style = "bg:#2C2D72 fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:#02303A fg:#F9FAFB"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#78350F fg:#F9FAFB"
+format = '[ $symbol $context ]($style)'
+
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:#4D7C0F fg:#F9FAFB"
+format = '[ ♥ $time ]($style)'
+
+[character]
+success_symbol = "[](bold fg:#22C55E)"
+error_symbol = "[](bold fg:#EF4444)"
+vicmd_symbol = "[](bold fg:#F59E0B)"
