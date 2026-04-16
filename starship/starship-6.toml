@@ -61,16 +61,14 @@ format = '[ $symbol $branch ]($style)'
 style = "bg:#7F1D1D fg:#F9FAFB"
 format = '[$all_status$ahead_behind ]($style)'
 
-# ---- LANGUAGE COLORS (kept distinct) ----
-
 [c]
 symbol = " "
-style = "bg:#A8B9CC fg:#1F2937"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [cpp]
 symbol = " "
-style = "bg:#00599C fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [golang]
@@ -80,66 +78,66 @@ format = '[ $symbol ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#DEA584 fg:#1F2937"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
 symbol = " "
-style = "bg:#3776AB fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#3C873A fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#EA2D2E fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#DC322F fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#5D4F85 fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [elixir]
 symbol = " "
-style = "bg:#6E4A7E fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#1293D8 fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#9558B2 fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:#FFE953 fg:#1F2937"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [lua]
 symbol = " "
-style = "bg:#2C2D72 fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#02303A fg:#F9FAFB"
+style = "bg:#FB923C fg:#1F2937"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#78350F fg:#F9FAFB"
+style = "bg:#FB923C fg:#F9FAFB"
 format = '[ $symbol $context ]($style)'
 
 [time]
