@@ -6,14 +6,23 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# Cousine
+# Bitstream Vera Sans Mono
 
-**Cousine** was designed by Steve Matteson as an innovative, refreshing sans serif design
-that is metrically compatible with Courier New.
+Version: 1.1
 
-For more information have a look at: https://fonts.google.com/specimen/Cousine
+## Why `BitstromWera` and not `Bitstream Vera Sans Mono`?
 
-Version: 1.211
+What's in a name? The reason for the name change is to comply with the SIL Open Font License (OFL), in particular the [Reserved Font Name mechanism][SIL-RFN]
+
+Some fonts have parts of their name "reserved" per the [Reserved Font Name mechanism][SIL-RFN]:
+> No Modified Version of the Font Software may use the Reserved Font
+> Name(s) unless explicit written permission is granted by the corresponding
+> Copyright Holder. This restriction only applies to the primary font name as
+> presented to the users.
+
+- The main goals seem to be to: `Avoid collisions`, `Protect authors`, `Minimize support`, and `Encourage derivatives`
+
+See the [Reserved Font Name section][SIL-RFN] for additional information
 
 ## Which font?
 
