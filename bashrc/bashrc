@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto --group-directories-first'
-alias ll='ls -alh --color=auto --group-directories-first'
+alias ll='ls -Alh --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
