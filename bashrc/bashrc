@@ -3,9 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -alh --color=auto --group-directories-first'
 alias grep='grep --color=auto'
-alias ll='ls -alh --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
@@ -28,11 +28,12 @@ alias lgit='lazygit'
 alias rm='rm -i'
 alias ip='ip -br addr | lolcat'
 alias lg='lazygit'
+alias ldock='lazydocker'
+alias cp='cp -r'
 alias Time='date | cut -d " " -f 4 | cut -d : -f 1,2 | lolcat'
 alias cpu='sensors | grep Tctl | lolcat'
-
-# --- caido ---
-alias caido='cd ~/caido-desktop-x64-linux && ./caido'
+alias nano='nvim'
+alias more='less'
 
 # --- trash-cli ---
 alias trash='trash-put'
@@ -44,14 +45,10 @@ alias empty-trash='trash-empty'
 alias pbat='bat -p'
 alias bat='bat -pn'
 alias cat='pbat'
-alias me='whoami'
 
 # --- git ---
 alias git-log='git log --oneline --graph --all'
 alias git-push='git push --force-with-lease'
-
-# --- burp pro ---
-alias burp-pro="burpsuitepro"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
@@ -61,9 +58,12 @@ eval "$(zoxide init bash)"
 
 # Setup Yazi
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd <"$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
+
+# Set EDITOR
+export EDITOR='nvim'
