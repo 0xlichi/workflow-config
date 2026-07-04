@@ -18,7 +18,7 @@ alias vantage='sudo vantage-cli conservation | lolcat'
 
 # My Custom Alias
 alias clr='clear'
-alias ff='fastfetch | lolcat'
+alias ff='fastfetch --config ~/.config/fastfetch/config.jsonc'
 alias battery='fastfetch | grep "Battery" | lolcat'
 alias ram='fastfetch | grep "Memory" | lolcat'
 alias online='fastfetch | grep "Uptime" | lolcat'
@@ -34,6 +34,8 @@ alias Time='date | cut -d " " -f 5 | cut -d ":" -f 1,2 | lolcat'
 alias cpu='sensors | grep Tctl | lolcat'
 alias nano='nvim'
 alias more='less'
+alias burp-pro='burpsuitepro'
+alias ai='llama-server --model ~/local-ai/gemma-4-E2B-it-Q4_K_M.gguf --ctx-size 8192 --threads 5 --port 8080'
 
 # --- trash-cli ---
 alias trash='trash-put'
@@ -49,6 +51,7 @@ alias cat='pbat'
 # --- git ---
 alias git-log='git log --oneline --graph --all'
 alias git-push='git push --force-with-lease'
+alias git-pull='git pull --rebase'
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/logo/logo.png",
+    "width": 50,
+    "height": 16,
+  },
+  "display": {
+    "separator": " 󰑃  ",
+  },
+  "modules": [
+    {
+      "type": "title",
+      "keyColor": "white",
+      "format": "\n",
+    },
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "red",
+    },
+    {
+      "type": "kernel",
+      "key": "├─ Kernel",
+      "keyColor": "red",
+    },
+    {
+      "type": "uptime",
+      "key": "├─󰔚 Uptime",
+      "keyColor": "red",
+    },
+    {
+      "type": "packages",
+      "key": "├─󰏖 Packages",
+      "keyColor": "red",
+    },
+    {
+      "type": "shell",
+      "key": "├─󱙷 Shell",
+      "keyColor": "red",
+    },
+    {
+      "type": "command",
+      "key": "└─󱦟 Age",
+      "keyColor": "red",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      // "format": "{1}",
+    },
+    "break",
+    {
+      "type": "de",
+      "key": "  DE",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wm",
+      "key": "󰧨 Window Manager",
+      "keyColor": "blue",
+    },
+    {
+      "type": "lm",
+      "key": "├─󰠜 Login Manager",
+      "keyColor": "blue",
+    },
+    {
+      "type": "terminal",
+      "key": "└─ Terminal",
+      "keyColor": "blue",
+    },
+    "break",
+    {
+      "type": "chassis",
+      "key": "󰌢 Laptop",
+      "keyColor": "green",
+    },
+    {
+      "type": "memory",
+      "key": "├─󰻠 RAM",
+      "keyColor": "green",
+      "format": "{1} / {2}",
+    },
+    {
+      "type": "disk",
+      "key": "├─󰻠 Storage",
+      "keyColor": "green",
+      "format": "{1} / {2}",
+      "folders": ["/"],
+    },
+    {
+      "type": "cpu",
+      "key": "├─󰻠 CPU",
+      "keyColor": "green",
+      "showPeCoreCount": true,
+      "showCoreCount": true,
+      "format": "{1} ({2} cores)",
+      "temp": true,
+    },
+    {
+      "type": "gpu",
+      "key": "├─󰍛 GPU",
+      "keyColor": "green",
+      "temp": true,
+      "format": "{1}",
+    },
+    {
+      "type": "opengl",
+      "key": "├─󰍛 OpenGL",
+      "keyColor": "green",
+      "format": "{1}",
+    },
+    {
+      "type": "vulkan",
+      "key": "├─󰍛 Vulkan",
+      "keyColor": "green",
+    },
+    {
+      "type": "display",
+      "key": "└─󰍹 Display",
+      "keyColor": "green",
+    },
+  ],
+}
