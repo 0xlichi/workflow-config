@@ -135,9 +135,9 @@ style = "bg:#2dd4bf fg:#020617"
 format = "[ $symbol $context ]($style)"
 
 [character]
-success_symbol = "[](bold fg:#22c55e)"
-error_symbol = "[](bold fg:#ef4444)"
-vicmd_symbol = "[](bold fg:##E8C007)"
+success_symbol = "[  ](bold fg:#22C55E)"
+error_symbol = "[  ](bold fg:#EF4444)"
+vicmd_symbol = "[  ](bold fg:#F59E0B)"
 
 
 
