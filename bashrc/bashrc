@@ -21,7 +21,7 @@ alias vantage='sudo vantage-cli conservation | lolcat'
 
 # My Custom Alias
 alias clr='clear'
-alias ff='fastfetch --config ~/.config/fastfetch/config.jsonc'
+alias ff='fastfetch --config ~/.config/fastfetch/config.json'
 alias battery='fastfetch | grep "Battery" | lolcat'
 alias ram='fastfetch | grep "Memory" | lolcat'
 alias online='fastfetch | grep "Uptime" | lolcat'
